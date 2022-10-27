@@ -1,4 +1,5 @@
 resource "aws_security_group" "security_group" {
+  count = local.enabled ? 1 : 0 
   name        = var.name
   description = var.description
   tags        = var.tags

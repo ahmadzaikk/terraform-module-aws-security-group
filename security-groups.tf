@@ -1,4 +1,4 @@
-resource "aws_security_group" "security_group" {
+resource "aws_security_group" "this" {
   count = local.enabled ? 1 : 0 
   name        = var.name
   description = var.description

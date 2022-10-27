@@ -3,7 +3,11 @@ variable "name" {
   description = "The name of the security group"
   default     = null
 }
-
+variable "enabled" {
+  type        = bool
+  default     = true
+  description = "Whether to create Security Group."
+}
 variable "description" {
   description = "The Security Group description."
   default     = "Managed by Terraform"

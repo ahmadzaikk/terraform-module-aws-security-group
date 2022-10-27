@@ -16,6 +16,7 @@ resource "aws_security_group" "security_group" {
       security_groups  = lookup(ingress.value, "security_groups", null)
       self             = lookup(ingress.value, "self", null)
       to_port          = lookup(ingress.value, "to_port", null)
+      source_security_group_id = lookup(ingress.value, "source_security_group_id", null)
     }
   }
   
@@ -31,6 +32,7 @@ resource "aws_security_group" "security_group" {
       security_groups  = lookup(egress.value, "security_groups", null)
       self             = lookup(egress.value, "self", null)
       to_port          = lookup(egress.value, "to_port", null)
+      source_security_group_id = lookup(egress.value, "source_security_group_id", null)
     }
   }
   

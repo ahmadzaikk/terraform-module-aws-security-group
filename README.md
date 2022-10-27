@@ -46,7 +46,7 @@ _To use this module, add the following call to your code:_
 
 ```tf
 module "security_group" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-security-group.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-aws-security-group.git?ref=master"
 
   name_prefix            = "ec2-sg-"
   description            = "EC2 Security Group that allows traffic from whitelisted ips"

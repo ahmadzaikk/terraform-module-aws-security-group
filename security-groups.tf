@@ -1,3 +1,6 @@
+locals {
+enabled = var.enabled
+}
 resource "aws_security_group" "this" {
   count = local.enabled ? 1 : 0 
   name        = var.name

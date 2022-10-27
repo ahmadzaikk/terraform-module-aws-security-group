@@ -1,7 +1,3 @@
-variable "name_prefix" {
-  description = "Creates a unique name beginning with the specified prefix"
-  default     = null
-}
 
 variable "name" {
   description = "The name of the security group"
@@ -9,8 +5,8 @@ variable "name" {
 }
 
 variable "description" {
-  description = "The security group description. Defaults to Managed by Terraform"
-  default     = null
+  description = "The Security Group description."
+  default     = "Managed by Terraform"
 }
 
 variable "ingress" {

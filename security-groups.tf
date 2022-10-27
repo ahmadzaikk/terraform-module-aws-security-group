@@ -2,6 +2,7 @@ resource "aws_security_group" "security_group" {
   name        = var.name
   name_prefix = var.name_prefix
   description = var.description
+  tags        = var.tags
 
   dynamic "ingress" {
     for_each = var.ingress

@@ -1,6 +1,5 @@
 resource "aws_security_group" "security_group" {
-  name        = var.name
-  name_prefix = var.name_prefix
+  name        = join("-", [var.name, "sg"])
   description = var.description
   tags        = var.tags
 
